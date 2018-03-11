@@ -5,13 +5,13 @@ rm -rf data*
 rm -rf *.pdf
 ./compile_programs.sh
 mkdir data_random data_reverse data_sorted
-
+path=$(pwd)
 outfile=my_runs_random.out
 # customize the line below for your choice of problem sizes
 for n in 320000 640000 1280000; do
 # can add more seeds
     for seed in 1; do
-        instance=/Users/urmilparikh/program1/data_random/rand_${n}_${seed}
+        instance=${path}/data_random/rand_${n}_${seed}
         ./random_integers.py $n $seed > $instance
         for implementation in ./run_insertionsort.sh ./run_mergesort.sh ./run_heapsort.sh ./run_sortutility.sh; do
             # customize the output lines for your convenience
@@ -31,7 +31,7 @@ done
 outfile=my_runs_sorted.out
 
 for n in 320000 640000 1280000; do
-        instance=/Users/urmilparikh/program1/data_sorted/rand_${n}
+        instance=${path}/data_sorted/rand_${n}
         ./sorted_input.py $n > $instance
         for implementation in ./run_insertionsort.sh ./run_mergesort.sh ./run_heapsort.sh ./run_sortutility.sh; do
             # customize the output lines for your convenience
@@ -49,7 +49,7 @@ done
 outfile=my_runs_reverse_sorted.out
 
 for n in 320000 640000 1280000; do
-        instance=/Users/urmilparikh/program1/data_reverse/rand_${n}
+        instance=${path}/data_reverse/rand_${n}
         ./reverse_input.py $n > $instance
         for implementation in ./run_insertionsort.sh ./run_mergesort.sh ./run_heapsort.sh ./run_sortutility.sh; do
             # customize the output lines for your convenience
