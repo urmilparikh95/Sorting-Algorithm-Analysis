@@ -6,4 +6,6 @@ prerequisites: A linux (or Unix based) machine, jdk8, python (preferably 2), R, 
 1. Clone the repo. Go to the Project Directory.  
 2. run ```./sample_run_script.sh```  
 
-You can see the output in .out files and graphs in Rplot.pdf. 
+You can see the output in .out files and graphs in Rplot.pdf.  
+Note: Execution of the script can take time as the input size is huge. Its a slow process, unless you have a supercomputer!!  
+
