@@ -5,4 +5,5 @@ This program is a test analysis of 3 major sorting algoritms - insertion sort, m
 prerequisites: A linux (or Unix based) machine, jdk8, python (preferably 2), R, bash interpreter.  
 1. Clone the repo. Go to the Project Directory.  
 2. run ```./sample_run_script.sh```  
+
 You can see the output in .out files and graphs in Rplot.pdf. 
